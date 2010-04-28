@@ -7,13 +7,13 @@ class Mongodb <Formula
   aka :mongo
 
   if Hardware.is_64_bit? and not ARGV.include? '--32bit'
-    url 'http://downloads.mongodb.org/osx/mongodb-osx-x86_64-1.2.4.tgz'
-    md5 '775835b5038b6724a27bb7d804acb079'
-    version '1.2.4-x86_64'
+    url 'http://downloads.mongodb.org/osx/mongodb-osx-x86_64-1.4.2.tgz'
+    md5 '1a202a73746798e4fa0fea0bcc213a5f'
+    version '1.4.2-x86_64'
   else
-    url 'http://downloads.mongodb.org/osx/mongodb-osx-i386-1.2.4.tgz'
-    md5 '330d211bdc2c69e27a19049bd35fd04d'
-    version '1.2.4-i386'
+    url 'http://downloads.mongodb.org/osx/mongodb-osx-i386-1.4.2.tgz'
+    md5 '70a42a0a6b05b398393fc76f0caaca86'
+    version '1.4.2-i386'
   end
 
   def skip_clean? path
