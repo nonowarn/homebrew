@@ -9,8 +9,8 @@ class HaskellPlatform <Formula
   depends_on 'ghc'
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking", "--prefix=#{prefix}"
-    system "make install"
+    system "./configure", "--prefix=#{prefix}", "--enable-unsupported-ghc-version"
+    system %Q(EXTRA_CONFIGURE_OPTS="--libdir=#{lib}/ghc" make install)
 
     puts 'Installation completed successfully. Now run "cabal update" to initialize the package list'
   end
